@@ -8,9 +8,7 @@ namespace ATM_Machine
 {
     class Program
     {
-
-        List<Account> accounts = new List<Account>();
-
+        
         private void ShowPinCheck()
         {
             int accountEntered;
@@ -20,7 +18,6 @@ namespace ATM_Machine
             int.TryParse(Console.ReadLine(), out accountEntered);
             Console.WriteLine("Enter your PIN");
             pinEntered = Console.ReadLine();
-
         }
 
         private void ShowMenu()
@@ -37,9 +34,10 @@ namespace ATM_Machine
 
         static void Main(string[] args)
         {
-            accounts.Add(new Account("Hans-Henrik Høgsted"));
+            Bank bank = new Bank();
+            bank.accounts.Add(new Account("Hans-Henrik Høgsted"));
             Console.ReadKey();
-            accounts.Add(new Account("Sara Müller", 5000.00));
+            bank.accounts.Add(new Account("Sara Müller", 5000.00));
             Console.ReadKey();
 
 
