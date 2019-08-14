@@ -15,6 +15,15 @@ namespace ATM_Machine
         private double balance;
         private string PIN;
 
+        public int GetAccountNumber()
+        {
+            return accountNumber;
+        }
+
+        public string GetPinNumber()
+        {
+            return PIN;
+        }
 
         public Account(string accountOwner)
         {
